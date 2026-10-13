@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstraVerum: True Celestial & Epigenetic Charts</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        pitch: '#020204',
+                        glass: 'rgba(12, 14, 24, 0.75)',
+                        'glass-border': 'rgba(255, 255, 255, 0.08)',
+                        gold: '#f3c669',
+                        cyanGlow: '#00f0ff',
+                        magentaGlow: '#ff00aa',
+                        violetGlow: '#8a2be2',
+                        emeraldGlow: '#10b981',
+                        ophiuchus: '#9333ea'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #020204; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+        
+        body {
+            background-color: #020204;
+            color: #f1f5f9;
+            font-family: 'Inter', sans-serif;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(138, 43, 226, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(0, 240, 255, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 60%);
+            background-attachment: fixed;
+        }
+
+        .cinzel { font-family: 'Cinzel', serif; }
+
+        .glass-card {
+            background: rgba(10, 12, 20, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .glass-card-interactive {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-interactive:hover {
+            border-color: rgba(243, 198, 105, 0.3);
+            box-shadow: 0 0 20px rgba(243, 198, 105, 0.1);
+        }
+
+        .glow-gold { text-shadow: 0 0 10px rgba(243, 198, 105, 0.5); }
+        .glow-cyan { text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+
+        /* Print styles */
+        @media print {
+            body { background: white !important; color: black !important; }
+            .no-print { display: none !important; }
+            .glass-card { border: 1px solid #ccc !important; box-shadow: none !important; background: white !important; color: black !important; }
+            .print-break { page-break-before: always; }
+        }
+
+        /* Wheel Picker Styles */
+        .wheel-drum::-webkit-scrollbar { display: none; }
+        .wheel-drum { -ms-overflow-style: none; scrollbar-width: none; scroll-snap-type: y mandatory; }
+        .wheel-item { scroll-snap-align: center; }
+    </style>
+</head>
+<body class="min-h-screen text-slate-100 flex flex-col justify-between selection:bg-gold/30 selection:text-gold">
+
+    <!-- HEADER NAVBAR -->
+    <header class="sticky top-0 z-50 glass-card border-b border-glass-border px-4 lg:px-8 py-3.5">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="p-2 rounded-xl bg-gradient-to-br from-violet-950/50 to-pitch border border-violet-500/30 text-gold shadow-lg shadow-violet-950/50">
+                    <i data-lucide="sparkles" class="w-6 h-6 text-gold"></i>
+                </div>
+                <div>
+                    <h1 class="cinzel font-bold text-lg sm:text-xl tracking-wider text-slate-100 flex items-center gap-2">
+                        ASTRA<span class="text-gold glow-gold">VERUM</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">True Celestial & Epigenetic Cellular Charts</p>
+                </div>
+            </div>
+            <!-- Sample buttons and export report removed per instructions -->
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <main class="max-w-7xl w-full mx-auto px-4 lg:px-8 py-6 flex-grow space-y-6">
+
+        <!-- CONCEPT EXPLANATION BANNER -->
+        <div class="glass-card rounded-2xl p-4 sm:p-5 border-l-4 border-l-gold relative overflow-hidden">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 relative z-10">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-950/80 text-emerald-400 border border-emerald-500/30">EPIGENETIC PARADIGM SHIFT</span>
+                        <h2 class="cinzel font-semibold text-slate-200 text-base">The Cellular Single-Cell Primordial Imprint</h2>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 max-w-4xl leading-relaxed">
+                        Conventional astrology calculates chart positions at physical somatic emergence (first breath). AstraVerum tests the core biological premise: <strong class="text-gold">the true cosmic resonance imprints when the individual is a single totipotent zygote cell</strong>. Explore the profound shift between the <em>Cellular Genesis Imprint</em> (Conception) vs. the <em>Somatic Emergence</em> (Birth) calculated across <strong class="text-cyanGlow">IAU Real-Sky Astronomical Constellation Boundaries</strong> including <strong class="text-ophiuchus font-bold">Ophiuchus</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- INPUT ENGINE & NAVIGATION TABS -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- LEFT COLUMN: INPUT CONTROLS (4 COLS) -->
+            <section class="lg:col-span-4 space-y-5 no-print">
+                <div class="glass-card rounded-2xl p-5 space-y-4">
+                    <div class="flex items-center justify-between border-b border-glass-border pb-3">
+                        <h3 class="cinzel font-bold text-slate-100 text-base flex items-center gap-2">
+                            <i data-lucide="sliders" class="w-4 h-4 text-gold"></i> Celestial Input Engine
+                        </h3>
+                        <span class="text-[10px] text-slate-400">Step 1 of 2</span>
+                    </div>
+
+                    <form id="astrology-form" class="space-y-4 text-xs">
+                        <!-- Name -->
+                        <div>
+                            <label class="block font-medium text-slate-300 mb-1">Subject Name / Identifier</label>
+                            <input type="text" id="subject-name" value="Celestial Traveler" class="w-full bg-pitch/80 border border-slate-700 rounded-lg px-3 py-2 text-slate-100 focus:outline-none focus:border-gold transition">
+                        </div>
+
+                        <!-- Date & Time of Birth with Wheel Date Picker -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <div>
+                                <label class="block font-medium text-slate-300 mb-1">Birth Date</label>
+                                <div class="relative flex items-center">
+                                    <input type="text" id="birth-date" value="1995-12-05" placeholder="YYYY-MM-DD" class="w-full bg-pitch/80 border border-slate-700 rounded-lg px-3 py-2 pr-9 text-slate-100 focus:outline-none focus:border-gold font-mono transition">
+                                    <button type="button" id="btn-open-birth-wheel" class="absolute right-2 text-violet-400 hover:text-violet-300 transition p-1" title="Open Wheel Year/Date Selector">
+                                        <i data-lucide="calendar" class="w-4 h-4 text-violet-400"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block font-medium text-slate-300 mb-1">Birth Time (Local)</label>
+                                <input type="time" id="birth-time" value="14:30" class="w-full bg-pitch/80 border border-slate-700 rounded-lg px-3 py-2 text-slate-100 focus:outline-none focus:border-gold transition">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2 pt-0.5">
+                            <input type="checkbox" id="time-unknown" class="rounded border-slate-700 bg-pitch text-gold focus:ring-0">
+                            <label for="time-unknown" class="text-slate-400 text-[11px]">Unknown Birth Time (Default to 12:00 PM)</label>
+                        </div>
+
+                        <!-- Location & City Selection -->
+                        <div class="space-y-2">
+                            <label class="block font-medium text-slate-300">Birth Location (100+ World Cities)</label>
+                            <div class="relative">
+                                <select id="city-select" class="w-full bg-pitch/90 border border-slate-700 rounded-lg px-3 py-2 text-slate-100 focus:outline-none focus:border-gold transition appearance-none">
+                                    <!-- Populated via JS -->
+                                </select>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-2.5 top-2.5 pointer-events-none"></i>
+                            </div>
+                            
+                            <!-- Custom Coordinates Collapsible -->
+                            <details class="text-[11px] text-slate-400 bg-slate-950/40 rounded-lg p-2 border border-slate-800">
+                                <summary class="cursor-pointer font-medium hover:text-slate-200 flex items-center justify-between">
+                                    <span>Override with Custom Lat/Long</span>
+                                    <i data-lucide="map-pin" class="w-3 h-3 text-gold"></i>
+                                </summary>
+                                <div class="grid grid-cols-3 gap-2 mt-2 pt-2 border-t border-slate-800">
+                                    <div>
+                                        <label class="block text-[10px]">Latitude</label>
+                                        <input type="number" step="0.0001" id="custom-lat" placeholder="20.1013" class="w-full bg-pitch border border-slate-700 rounded px-1.5 py-1 text-slate-100">
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px]">Longitude</label>
+                                        <input type="number" step="0.0001" id="custom-lng" placeholder="-98.7591" class="w-full bg-pitch border border-slate-700 rounded px-1.5 py-1 text-slate-100">
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px]">UTC Offset</label>
+                                        <input type="number" step="0.5" id="custom-tz" placeholder="-6" class="w-full bg-pitch border border-slate-700 rounded px-1.5 py-1 text-slate-100">
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+
+                        <!-- Epigenetic Conception Engine -->
+                        <div class="pt-2 border-t border-glass-border space-y-2">
+                            <label class="block font-semibold text-emerald-400 flex items-center gap-1.5">
+                                <i data-lucide="dna" class="w-4 h-4"></i> Gestational & Conception Settings
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <div>
+                                    <label class="block text-[11px] text-slate-400 mb-1">Gestation Period</label>
+                                    <select id="gestation-days" class="w-full bg-pitch border border-slate-700 rounded-lg px-2.5 py-1.5 text-slate-100 focus:outline-none focus:border-emerald-500">
+                                        <option value="266" selected>266 Days (Average Full Term)</option>
+                                        <option value="280">280 Days (10 Lunar Months)</option>
+                                        <option value="252">252 Days (36 Weeks Premature)</option>
+                                        <option value="294">294 Days (Post-Term)</option>
+                                        <option value="custom">Custom Timestamp</option>
+                                    </select>
+                                </div>
+                                <div id="custom-conception-container" class="hidden">
+                                    <label class="block text-[11px] text-slate-400 mb-1">Exact Conception Date</label>
+                                    <div class="relative flex items-center">
+                                        <input type="text" id="custom-conception-date" placeholder="YYYY-MM-DD" class="w-full bg-pitch border border-slate-700 rounded-lg px-2 py-1 pr-8 text-slate-100 font-mono">
+                                        <button type="button" id="btn-open-conception-wheel" class="absolute right-2 text-violet-400 hover:text-violet-300 transition">
+                                            <i data-lucide="calendar" class="w-3.5 h-3.5 text-violet-400"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="calculated-conception-display" class="flex flex-col justify-center">
+                                    <span class="text-[10px] text-slate-400">Est. Single Cell Zygote Date:</span>
+                                    <span id="estimated-conception-span" class="text-xs font-mono font-bold text-emerald-400">--</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Calculation Mode Selector (Bi-wheel removed) -->
+                        <div class="pt-2 border-t border-glass-border space-y-2">
+                            <label class="block font-semibold text-gold">Chart Mode View</label>
+                            <div class="grid grid-cols-2 gap-1 bg-pitch p-1 rounded-xl border border-slate-800">
+                                <button type="button" data-mode="birth" class="mode-btn active px-2 py-1.5 rounded-lg font-medium text-[11px] transition text-center bg-gold/20 text-gold border border-gold/40">
+                                    Birth Chart
+                                </button>
+                                <button type="button" data-mode="conception" class="mode-btn px-2 py-1.5 rounded-lg font-medium text-[11px] transition text-center text-slate-400 hover:text-slate-200">
+                                    Cellular Zygote
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Zodiac System Engine Toggle (Sidereal 13 equal segments commented out) -->
+                        <div class="space-y-1">
+                            <label class="block text-[11px] font-medium text-slate-400">Astrometric Zodiac Engine</label>
+                            <select id="zodiac-system" class="w-full bg-pitch border border-slate-700 rounded-lg px-3 py-1.5 text-slate-100 text-xs focus:outline-none focus:border-gold">
+                                <option value="iau" selected>IAU Real-Sky (13 Constellations with Ophiuchus)</option>
+                                <!-- <option value="sidereal13">True Sidereal Equal (13 x 27.69° Segments)</option> -->
+                                <option value="tropical">Classical Tropical Reference (12 Signs - Precessed Drift)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 px-4 rounded-xl font-bold bg-gradient-to-r from-gold via-amber-500 to-yellow-600 text-pitch shadow-lg shadow-gold/20 hover:brightness-110 active:scale-[0.99] transition flex items-center justify-center gap-2">
+                            <i data-lucide="compass" class="w-4 h-4"></i> Generate True Celestial Chart
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- RIGHT COLUMN: INTERACTIVE CHART & REPORT PANELS (8 COLS) -->
+            <section class="lg:col-span-8 space-y-6">
+
+                <!-- MAIN TABS CONTROL -->
+                <div class="flex items-center gap-2 border-b border-glass-border pb-2 overflow-x-auto no-print">
+                    <button data-tab="wheel" class="tab-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-gold border border-gold/40 flex items-center gap-2 whitespace-nowrap">
+                        <i data-lucide="disc" class="w-4 h-4"></i> Interactive Chart Wheel
+                    </button>
+                    <button data-tab="comparison" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-slate-200 border border-transparent flex items-center gap-2 whitespace-nowrap">
+                        <i data-lucide="git-compare" class="w-4 h-4"></i> Cellular vs Somatic Analysis
+                    </button>
+                    <button data-tab="report" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-slate-200 border border-transparent flex items-center gap-2 whitespace-nowrap">
+                        <i data-lucide="file-text" class="w-4 h-4"></i> Full Celestial Interpretation
+                    </button>
+                    <button data-tab="aspects" class="tab-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-slate-200 border border-transparent flex items-center gap-2 whitespace-nowrap">
+                        <i data-lucide="grid" class="w-4 h-4"></i> Aspect Matrix & Orbs
+                    </button>
+                </div>
+
+                <!-- TAB 1: INTERACTIVE CHART WHEEL -->
+                <div id="tab-wheel" class="tab-content space-y-4">
+                    <div class="glass-card rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center relative overflow-hidden min-h-[520px]">
+                        
+                        <!-- Top Summary Info Bar -->
+                        <div class="w-full flex flex-col sm:flex-row items-center justify-between gap-2 mb-4 pb-3 border-b border-glass-border text-xs">
+                            <div class="flex items-center gap-2">
+                                <span id="summary-subject" class="font-bold text-slate-100 text-sm">Celestial Traveler</span>
+                                <span id="summary-mode-badge" class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gold/20 text-gold border border-gold/40">Birth Chart View</span>
+                            </div>
+                            <div class="text-slate-400 font-mono text-[11px] flex items-center gap-3">
+                                <span><strong class="text-slate-300">Location:</strong> <span id="summary-location">Pachuca de Soto, Mexico</span></span>
+                                <span><strong class="text-slate-300">Date:</strong> <span id="summary-datetime">1995-12-05 14:30</span></span>
+                            </div>
+                        </div>
+
+                        <!-- SVG Celestial Wheel Container -->
+                        <div id="chart-svg-container" class="w-full max-w-[500px] aspect-square relative flex items-center justify-center">
+                            <!-- SVG generated dynamically by JavaScript -->
+                        </div>
+
+                        <!-- Interactive Planet Inspection Box -->
+                        <div id="chart-inspection-box" class="w-full mt-3 p-3 rounded-xl bg-pitch/90 border border-gold/30 text-xs hidden flex items-center justify-between gap-2">
+                            <div id="inspection-content" class="flex items-center gap-2 text-slate-200">
+                                <!-- Populated on click -->
+                            </div>
+                            <button onclick="document.getElementById('chart-inspection-box').classList.add('hidden')" class="text-slate-400 hover:text-slate-200 text-sm px-2">&times;</button>
+                        </div>
+
+                        <!-- Chart Controls & Legend Footer -->
+                        <div class="w-full mt-4 pt-3 border-t border-glass-border flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
+                            <div class="flex items-center gap-3 flex-wrap">
+                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-cyanGlow inline-block"></span> Sun/Inner</span>
+                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-magentaGlow inline-block"></span> Moon</span>
+                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-ophiuchus inline-block"></span> Ophiuchus Sector</span>
+                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-emeraldGlow inline-block"></span> Trine (120°)</span>
+                                <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span> Square (90°)</span>
+                            </div>
+                            <span class="text-[10px] text-slate-500 italic">Click any planet symbol or sector to inspect positions</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Planetary Summary Row -->
+                    <div id="quick-positions-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- TAB 2: CELLULAR VS SOMATIC COMPARISON -->
+                <div id="tab-comparison" class="tab-content hidden space-y-5">
+                    <div class="glass-card rounded-2xl p-6 space-y-4">
+                        <div class="border-b border-glass-border pb-3 flex items-center justify-between">
+                            <div>
+                                <h3 class="cinzel font-bold text-lg text-gold flex items-center gap-2">
+                                    <i data-lucide="dna" class="w-5 h-5 text-emerald-400"></i> Cellular Imprint vs. Somatic Emergence
+                                </h3>
+                                <p class="text-xs text-slate-400">Comparative shift from 1-Cell Zygote Conception to Physical Birth</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-500/30 text-xs font-mono font-semibold">
+                                Δ ~266 Days Gestation
+                            </span>
+                        </div>
+
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            At the moment of fertilization, the single-cell zygote possesses all initial genetic potential and unexpressed epigenetic switches. Astrologically, this is the <strong class="text-emerald-400">Cellular Genesis Imprint</strong>—the universe's energetic signature on your raw biology. By contrast, the <strong class="text-gold">Somatic Birth Chart</strong> represents your entry into independent atmospheric existence.
+                        </p>
+
+                        <!-- Side by side comparison table -->
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs text-slate-300">
+                                <thead class="bg-pitch/80 text-slate-400 uppercase font-mono text-[10px] border-b border-slate-800">
+                                    <tr>
+                                        <th class="py-2.5 px-3">Celestial Body</th>
+                                        <th class="py-2.5 px-3 text-emerald-400">Cellular Conception Position</th>
+                                        <th class="py-2.5 px-3 text-gold">Somatic Birth Position</th>
+                                        <th class="py-2.5 px-3">Precessional Shift & Epigenetic Impact</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="comparison-table-body" class="divide-y divide-slate-800/60 font-mono">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: FULL CELESTIAL INTERPRETATION REPORT -->
+                <div id="tab-report" class="tab-content hidden space-y-6">
+                    <div class="glass-card rounded-2xl p-6 space-y-6">
+                        <div class="border-b border-glass-border pb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                            <div>
+                                <h3 class="cinzel font-bold text-xl text-slate-100 flex items-center gap-2">
+                                    <i data-lucide="book-open" class="w-5 h-5 text-gold"></i> Comprehensive Astro-Epigenetic Report
+                                </h3>
+                                <p class="text-xs text-slate-400">In-depth analysis across 13 astronomical constellations including Ophiuchus</p>
+                            </div>
+                        </div>
+
+                        <!-- Elements & Modalities Breakdown Metrics -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-pitch/60 p-4 rounded-xl border border-slate-800">
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Elemental Distribution</h4>
+                                <div id="elements-bars" class="space-y-2 text-xs">
+                                    <!-- Dynamic Progress Bars -->
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Quadruplicity / Modality Balance</h4>
+                                <div id="modalities-bars" class="space-y-2 text-xs">
+                                    <!-- Dynamic Progress Bars -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detailed Interpretations Container -->
+                        <div id="full-interpretations-container" class="space-y-6">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: ASPECT MATRIX & ORBS -->
+                <div id="tab-aspects" class="tab-content hidden space-y-5">
+                    <div class="glass-card rounded-2xl p-6 space-y-4">
+                        <div class="border-b border-glass-border pb-3">
+                            <h3 class="cinzel font-bold text-lg text-slate-100 flex items-center gap-2">
+                                <i data-lucide="grid" class="w-5 h-5 text-cyanGlow"></i> Planetary Aspect Grid & Harmonic Orbs
+                            </h3>
+                            <p class="text-xs text-slate-400">Geometric relationships calculated within strict orbital tolerance thresholds</p>
+                        </div>
+
+                        <!-- Aspect Matrix Table -->
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-center text-xs border-collapse">
+                                <thead id="aspect-matrix-head" class="bg-pitch text-slate-400 font-mono text-[10px]">
+                                    <!-- Populated by JS -->
+                                </thead>
+                                <tbody id="aspect-matrix-body" class="divide-y divide-slate-800/50 font-mono">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Aspect List Descriptions -->
+                        <div id="aspects-list-container" class="mt-6 space-y-3 pt-4 border-t border-glass-border">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+    <!-- WHEEL DATE PICKER MODAL -->
+    <div id="wheel-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
+        <div class="glass-card rounded-2xl p-6 max-w-sm w-full mx-4 space-y-4 border border-violet-500/30 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-glass-border pb-3">
+                <h3 class="cinzel font-bold text-slate-100 text-sm flex items-center gap-2">
+                    <i data-lucide="calendar" class="w-4 h-4 text-violet-400"></i> Fast Wheel Date Selector
+                </h3>
+                <button type="button" id="wheel-modal-close" class="text-slate-400 hover:text-slate-200 text-sm">&times;</button>
+            </div>
+            
+            <p class="text-[11px] text-slate-400">Scroll through the years, months, and days with the wheel drums, or type directly into the input field below.</p>
+
+            <div class="grid grid-cols-3 gap-2 text-center">
+                <!-- Year Wheel -->
+                <div class="space-y-1">
+                    <span class="text-[10px] text-violet-400 font-semibold uppercase">Year</span>
+                    <div id="wheel-year" class="h-32 bg-pitch border border-slate-700 rounded-lg overflow-y-auto wheel-drum relative flex flex-col items-center py-12 space-y-2 cursor-pointer">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                <!-- Month Wheel -->
+                <div class="space-y-1">
+                    <span class="text-[10px] text-violet-400 font-semibold uppercase">Month</span>
+                    <div id="wheel-month" class="h-32 bg-pitch border border-slate-700 rounded-lg overflow-y-auto wheel-drum relative flex flex-col items-center py-12 space-y-2 cursor-pointer">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                <!-- Day Wheel -->
+                <div class="space-y-1">
+                    <span class="text-[10px] text-violet-400 font-semibold uppercase">Day</span>
+                    <div id="wheel-day" class="h-32 bg-pitch border border-slate-700 rounded-lg overflow-y-auto wheel-drum relative flex flex-col items-center py-12 space-y-2 cursor-pointer">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-2 border-t border-glass-border flex items-center justify-between">
+                <span id="wheel-selected-preview" class="text-xs font-mono font-bold text-gold">1995-12-05</span>
+                <button type="button" id="wheel-modal-confirm" class="px-4 py-2 rounded-xl text-xs font-bold bg-violet-600 text-white hover:bg-violet-500 transition shadow-lg shadow-violet-900/50">
+                    Apply Date
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-glass-border glass-card mt-12 py-6 px-4 text-center text-xs text-slate-500 no-print">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p class="flex items-center gap-1">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold"></i> AstraVerum Engine &copy; 2026. True Astronomical Ecliptic & Epigenetic Astrology.
+            </p>
+            <p class="text-[11px] text-slate-600">
+                Data calibrated against IAU Ecliptic Boundaries & Ephemeris Series. Built for deep self-inquiry.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // ==========================================
+        // 1. DATABASE: 100+ WORLD CITIES WITH LAT/LNG/TZ
+        // ==========================================
+        const WORLD_CITIES = [
+            { name: "Pachuca de Soto, Mexico", lat: 20.1013, lng: -98.7591, tz: -6 },
+            { name: "Mexico City, Mexico", lat: 19.4326, lng: -99.1332, tz: -6 },
+            { name: "Guadalajara, Mexico", lat: 20.6597, lng: -103.3496, tz: -6 },
+            { name: "Monterrey, Mexico", lat: 25.6866, lng: -100.3161, tz: -6 },
+            { name: "Puebla, Mexico", lat: 19.0414, lng: -98.2063, tz: -6 },
+            { name: "Queretaro, Mexico", lat: 20.5888, lng: -100.3899, tz: -6 },
+            { name: "Cancun, Mexico", lat: 21.1619, lng: -86.8515, tz: -5 },
+            { name: "Merida, Mexico", lat: 20.9674, lng: -89.5926, tz: -6 },
+            { name: "Oaxaca, Mexico", lat: 17.0732, lng: -96.7266, tz: -6 },
+            { name: "Tijuana, Mexico", lat: 32.5149, lng: -117.0382, tz: -8 },
+            { name: "New York, USA", lat: 40.7128, lng: -74.0060, tz: -5 },
+            { name: "Los Angeles, USA", lat: 34.0522, lng: -118.2437, tz: -8 },
+            { name: "Chicago, USA", lat: 41.8781, lng: -87.6298, tz: -6 },
+            { name: "San Francisco, USA", lat: 37.7749, lng: -122.4194, tz: -8 },
+            { name: "Miami, USA", lat: 25.7617, lng: -80.1918, tz: -5 },
+            { name: "London, UK", lat: 51.5074, lng: -0.1278, tz: 0 },
+            { name: "Paris, France", lat: 48.8566, lng: 2.3522, tz: 1 },
+            { name: "Berlin, Germany", lat: 52.5200, lng: 13.4050, tz: 1 },
+            { name: "Madrid, Spain", lat: 40.4168, lng: -3.7038, tz: 1 },
+            { name: "Barcelona, Spain", lat: 41.3851, lng: 2.1734, tz: 1 },
+            { name: "Rome, Italy", lat: 41.9028, lng: 12.4964, tz: 1 },
+            { name: "Milan, Italy", lat: 45.4642, lng: 9.1900, tz: 1 },
+            { name: "Amsterdam, Netherlands", lat: 52.3676, lng: 4.9041, tz: 1 },
+            { name: "Vienna, Austria", lat: 48.2082, lng: 16.3738, tz: 1 },
+            { name: "Zurich, Switzerland", lat: 47.3769, lng: 8.5417, tz: 1 },
+            { name: "Dublin, Ireland", lat: 53.3498, lng: -6.2603, tz: 0 },
+            { name: "Tokyo, Japan", lat: 35.6762, lng: 139.6503, tz: 9 },
+            { name: "Beijing, China", lat: 39.9042, lng: 116.4074, tz: 8 },
+            { name: "Shanghai, China", lat: 31.2304, lng: 121.4737, tz: 8 },
+            { name: "Hong Kong", lat: 22.3193, lng: 114.1694, tz: 8 },
+            { name: "Seoul, South Korea", lat: 37.5665, lng: 126.9780, tz: 9 },
+            { name: "Bangkok, Thailand", lat: 13.7563, lng: 100.5018, tz: 7 },
+            { name: "Singapore", lat: 1.3521, lng: 103.8198, tz: 8 },
+            { name: "New Delhi, India", lat: 28.6139, lng: 77.2090, tz: 5.5 },
+            { name: "Mumbai, India", lat: 19.0760, lng: 72.8777, tz: 5.5 },
+            { name: "Sydney, Australia", lat: -33.8688, lng: 151.2093, tz: 10 },
+            { name: "Melbourne, Australia", lat: -37.8136, lng: 144.9631, tz: 10 },
+            { name: "Auckland, New Zealand", lat: -36.8485, lng: 174.7633, tz: 12 },
+            { name: "Cairo, Egypt", lat: 30.0444, lng: 31.2357, tz: 2 },
+            { name: "Johannesburg, South Africa", lat: -26.2041, lng: 28.0473, tz: 2 },
+            { name: "Lagos, Nigeria", lat: 6.5244, lng: 3.3792, tz: 1 },
+            { name: "Nairobi, Kenya", lat: -1.2921, lng: 36.8219, tz: 3 },
+            { name: "Riyadh, Saudi Arabia", lat: 24.7136, lng: 46.6753, tz: 3 },
+            { name: "Dubai, UAE", lat: 25.2048, lng: 55.2708, tz: 4 },
+            { name: "Istanbul, Turkey", lat: 41.0082, lng: 28.9784, tz: 3 },
+            { name: "Moscow, Russia", lat: 55.7558, lng: 37.6173, tz: 3 },
+            { name: "Sao Paulo, Brazil", lat: -23.5505, lng: -46.6333, tz: -3 },
+            { name: "Rio de Janeiro, Brazil", lat: -22.9068, lng: -43.1729, tz: -3 },
+            { name: "Buenos Aires, Argentina", lat: -34.6037, lng: -58.3816, tz: -3 },
+            { name: "Santiago, Chile", lat: -33.4489, lng: -70.6693, tz: -4 },
+            { name: "Lima, Peru", lat: -12.0464, lng: -77.0428, tz: -5 },
+            { name: "Bogota, Colombia", lat: 4.7110, lng: -74.0721, tz: -5 },
+            { name: "Caracas, Venezuela", lat: 10.4806, lng: -66.9036, tz: -4 },
+            { name: "Toronto, Canada", lat: 43.6532, lng: -79.3832, tz: -5 },
+            { name: "Vancouver, Canada", lat: 49.2827, lng: -123.1207, tz: -8 },
+            { name: "Montreal, Canada", lat: 45.5017, lng: -73.5673, tz: -5 },
+            { name: "Stockholm, Sweden", lat: 59.3293, lng: 18.0686, tz: 1 },
+            { name: "Oslo, Norway", lat: 59.9139, lng: 10.7522, tz: 1 },
+            { name: "Copenhagen, Denmark", lat: 55.6761, lng: 12.5683, tz: 1 },
+            { name: "Helsinki, Finland", lat: 60.1699, lng: 24.9384, tz: 2 },
+            { name: "Athens, Greece", lat: 37.9838, lng: 23.7275, tz: 2 },
+            { name: "Warsaw, Poland", lat: 52.2297, lng: 21.0122, tz: 1 },
+            { name: "Prague, Czechia", lat: 50.0755, lng: 14.4378, tz: 1 },
+            { name: "Budapest, Hungary", lat: 47.4979, lng: 19.0402, tz: 1 },
+            { name: "Lisbon, Portugal", lat: 38.7223, lng: -9.1393, tz: 0 },
+            { name: "Tel Aviv, Israel", lat: 32.0853, lng: 34.7818, tz: 2 },
+            { name: "Kuala Lumpur, Malaysia", lat: 3.1390, lng: 101.6869, tz: 8 },
+            { name: "Jakarta, Indonesia", lat: -6.2088, lng: 106.8456, tz: 7 },
+            { name: "Manila, Philippines", lat: 14.5995, lng: 120.9842, tz: 8 },
+            { name: "Ho Chi Minh City, Vietnam", lat: 10.8231, lng: 106.6297, tz: 7 },
+            { name: "Honolulu, USA", lat: 21.3069, lng: -157.8583, tz: -10 },
+            { name: "Anchorage, USA", lat: 61.2181, lng: -149.9003, tz: -9 },
+            { name: "Reykjavik, Iceland", lat: 64.1466, lng: -21.9426, tz: 0 },
+            { name: "Casablanca, Morocco", lat: 33.5731, lng: -7.5898, tz: 1 },
+            { name: "Doha, Qatar", lat: 25.2854, lng: 51.5310, tz: 3 },
+            { name: "Taipei, Taiwan", lat: 25.0330, lng: 121.5654, tz: 8 },
+            { name: "Quito, Ecuador", lat: -0.1807, lng: -78.4678, tz: -5 },
+            { name: "La Paz, Bolivia", lat: -16.4897, lng: -68.1193, tz: -4 },
+            { name: "Montevideo, Uruguay", lat: -34.9011, lng: -56.1645, tz: -3 },
+            { name: "San Jose, Costa Rica", lat: 9.9281, lng: -84.0907, tz: -6 },
+            { name: "Panama City, Panama", lat: 8.9824, lng: -79.5199, tz: -5 },
+            { name: "San Juan, Puerto Rico", lat: 18.4655, lng: -66.1057, tz: -4 },
+            { name: "Kingston, Jamaica", lat: 17.9712, lng: -76.7928, tz: -5 },
+            { name: "Havana, Cuba", lat: 23.1136, lng: -82.3666, tz: -5 },
+            { name: "Guatemala City, Guatemala", lat: 14.6349, lng: -90.5069, tz: -6 },
+            { name: "San Salvador, El Salvador", lat: 13.6929, lng: -89.2182, tz: -6 },
+            { name: "Tegucigalpa, Honduras", lat: 14.0723, lng: -87.1921, tz: -6 },
+            { name: "Managua, Nicaragua", lat: 12.1150, lng: -86.2362, tz: -6 },
+            { name: "Santo Domingo, Dominican Rep", lat: 18.4861, lng: -69.9312, tz: -4 },
+            { name: "Asuncion, Paraguay", lat: -25.2637, lng: -57.5759, tz: -4 },
+            { name: "Cape Town, South Africa", lat: -33.9249, lng: 18.4241, tz: 2 },
+            { name: "Edinburgh, Scotland", lat: 55.9533, lng: -3.1883, tz: 0 },
+            { name: "Osaka, Japan", lat: 34.6937, lng: 135.5023, tz: 9 },
+            { name: "Kyoto, Japan", lat: 35.0116, lng: 135.7681, tz: 9 },
+            { name: "Brisbane, Australia", lat: -27.4698, lng: 153.0251, tz: 10 },
+            { name: "Perth, Australia", lat: -31.9505, lng: 115.8605, tz: 8 }
+        ];
+
+        // ==========================================
+        // 2. ASTRONOMICAL IAU ECLIPTIC CONSTELLATIONS
+        // ==========================================
+        const IAU_CONSTELLATIONS = [
+            { id: "pisces", name: "Pisces", symbol: "♓", startDeg: 351.5, endDeg: 30.0, span: 38.5, element: "Water", modality: "Mutable", color: "#38bdf8", desc: "Intuitive, boundless, mystical, biological fluid connectivity." },
+            { id: "aries", name: "Aries", symbol: "♈", startDeg: 30.0, endDeg: 54.7, span: 24.7, element: "Fire", modality: "Cardinal", color: "#f87171", desc: "Initiating spark, impulse, primal vital vitality." },
+            { id: "taurus", name: "Taurus", symbol: "♉", startDeg: 54.7, endDeg: 91.4, span: 36.7, element: "Earth", modality: "Fixed", color: "#4ade80", desc: "Physical anchoring, sensory embodiment, deep somatic roots." },
+            { id: "gemini", name: "Gemini", symbol: "♊", startDeg: 91.4, endDeg: 119.3, span: 27.9, element: "Air", modality: "Mutable", color: "#facc15", desc: "Synaptic connectivity, dual duality, mental synthesis." },
+            { id: "cancer", name: "Cancer", symbol: "♋", startDeg: 119.3, endDeg: 139.4, span: 20.1, element: "Water", modality: "Cardinal", color: "#38bdf8", desc: "Cellular membrane protection, matrix environment, maternal memory." },
+            { id: "leo", name: "Leo", symbol: "♌", startDeg: 139.4, endDeg: 175.2, span: 35.8, element: "Fire", modality: "Fixed", color: "#f87171", desc: "Radiant solar nucleus, cellular gene expression, sovereign warmth." },
+            { id: "virgo", name: "Virgo", symbol: "♍", startDeg: 175.2, endDeg: 219.3, span: 44.1, element: "Earth", modality: "Mutable", color: "#4ade80", desc: "Intricate biological calibration, enzymatic precision, somatic intelligence." },
+            { id: "libra", name: "Libra", symbol: "♎", startDeg: 219.3, endDeg: 242.5, span: 23.2, element: "Air", modality: "Cardinal", color: "#facc15", desc: "Homeostatic equilibrium, relational polarity, bio-electric balance." },
+            { id: "scorpius", name: "Scorpius", symbol: "♏", startDeg: 242.5, endDeg: 249.2, span: 6.7, element: "Water", modality: "Fixed", color: "#38bdf8", desc: "Concentrated power, primal metamorphosis, genetic recombination." },
+            { id: "ophiuchus", name: "Ophiuchus", symbol: "⛎", startDeg: 249.2, endDeg: 267.8, span: 18.6, element: "Ether / Serpent", modality: "Transcendent", color: "#9333ea", desc: "The Serpent Bearer: Alchemical healer, DNA strand weaver, shadow transmutation, epigenetic liberation." },
+            { id: "sagittarius", name: "Sagittarius", symbol: "♐", startDeg: 267.8, endDeg: 301.2, span: 33.4, element: "Fire", modality: "Mutable", color: "#f87171", desc: "Expanding horizon, philosophical vectors, genetic questing." },
+            { id: "capricornus", name: "Capricornus", symbol: "♑", startDeg: 301.2, endDeg: 329.0, span: 27.8, element: "Earth", modality: "Cardinal", color: "#4ade80", desc: "Skeletal structure, temporal crystallization, evolutionary endurance." },
+            { id: "aquarius", name: "Aquarius", symbol: "♒", startDeg: 329.0, endDeg: 351.5, span: 22.5, element: "Air", modality: "Fixed", color: "#facc15", desc: "Bio-electrical network, collective resonance, systemic innovation." }
+        ];
+
+        const CELESTIAL_BODIES = [
+            { id: "sun", name: "Sun", symbol: "☉", color: "#f3c669" },
+            { id: "moon", name: "Moon", symbol: "☽", color: "#e2e8f0" },
+            { id: "mercury", name: "Mercury", symbol: "☿", color: "#a855f7" },
+            { id: "venus", name: "Venus", symbol: "♀", color: "#ec4899" },
+            { id: "mars", name: "Mars", symbol: "♂", color: "#ef4444" },
+            { id: "jupiter", name: "Jupiter", symbol: "♃", color: "#3b82f6" },
+            { id: "saturn", name: "Saturn", symbol: "♄", color: "#eab308" },
+            { id: "uranus", name: "Uranus", symbol: "♅", color: "#06b6d4" },
+            { id: "neptune", name: "Neptune", symbol: "♆", color: "#6366f1" },
+            { id: "pluto", name: "Pluto", symbol: "♇", color: "#a855f7" },
+            { id: "chiron", name: "Chiron", symbol: "⚷", color: "#10b981" },
+            { id: "northnode", name: "North Node", symbol: "☊", color: "#f97316" }
+        ];
+
+        // ==========================================
+        // 3. EPHEMERIS CALCULATION ENGINE
+        // ==========================================
+        function dateToJulianDay(year, month, day, hours = 12) {
+            if (month <= 2) {
+                year -= 1;
+                month += 12;
+            }
+            const A = Math.floor(year / 100);
+            const B = 2 - A + Math.floor(A / 4);
+            return Math.floor(365.25 * (year + 4716)) + Math.floor(30.6001 * (month + 1)) + day + hours / 24.0 + B - 1524.5;
+        }
+
+        function calculateEclipticPositions(dateObj, lat, lng) {
+            const year = dateObj.getUTCFullYear();
+            const month = dateObj.getUTCMonth() + 1;
+            const day = dateObj.getUTCDate();
+            const hours = dateObj.getUTCHours() + dateObj.getUTCMinutes() / 60.0;
+
+            const JD = dateToJulianDay(year, month, day, hours);
+            const T = (JD - 2451545.0) / 36525.0;
+
+            const sunL = (280.46646 + 36000.76983 * T + 0.0003032 * T * T) % 360;
+            const sunM = (357.52911 + 35999.05029 * T) % 360;
+            const C = (1.914602 - 0.004817 * T) * Math.sin(sunM * Math.PI / 180) + (0.019993 - 0.000101 * T) * Math.sin(2 * sunM * Math.PI / 180);
+            const sunTrueL = (sunL + C) % 360;
+
+            const moonL = (218.316 + 481267.8813 * T) % 360;
+            const moonM = (134.963 + 477198.8675 * T) % 360;
+            const moonEq = 6.289 * Math.sin(moonM * Math.PI / 180) - 1.274 * Math.sin((2 * (moonL - sunTrueL) - moonM) * Math.PI / 180);
+            const moonTrueL = (moonL + moonEq + 360) % 360;
+
+            const mercuryL = (252.251 + 149472.674 * T + 5 * Math.sin((sunTrueL - 100) * Math.PI / 180)) % 360;
+            const venusL = (181.979 + 58517.815 * T + 3 * Math.cos(T * 2)) % 360;
+            const marsL = (355.433 + 19140.299 * T + 4 * Math.sin(T)) % 360;
+            const jupiterL = (34.351 + 3034.9057 * T) % 360;
+            const saturnL = (50.077 + 1222.1138 * T) % 360;
+            const uranusL = (314.055 + 428.466 * T) % 360;
+            const neptuneL = (304.349 + 218.486 * T) % 360;
+            const plutoL = (238.929 + 145.180 * T) % 360;
+            const chironL = (200.12 + 720.5 * T) % 360;
+            const northNodeL = (125.044 - 1934.136 * T + 360) % 360;
+
+            const norm = (val) => (val % 360 + 360) % 360;
+
+            const positions = {
+                sun: norm(sunTrueL),
+                moon: norm(moonTrueL),
+                mercury: norm(mercuryL),
+                venus: norm(venusL),
+                mars: norm(marsL),
+                jupiter: norm(jupiterL),
+                saturn: norm(saturnL),
+                uranus: norm(uranusL),
+                neptune: norm(neptuneL),
+                pluto: norm(plutoL),
+                chiron: norm(chironL),
+                northnode: norm(northNodeL)
+            };
+
+            const GMST0 = (280.46061837 + 360.98564736629 * (JD - 2451545.0)) % 360;
+            const LST = (GMST0 + lng + 360) % 360;
+            const eps = 23.439;
+            const ascRad = Math.atan2(Math.cos(LST * Math.PI / 180), -Math.sin(LST * Math.PI / 180) * Math.cos(eps * Math.PI / 180) - Math.tan(lat * Math.PI / 180) * Math.sin(eps * Math.PI / 180));
+            const ascDeg = norm(ascRad * 180 / Math.PI);
+
+            return { positions, ascendant: ascDeg, JulianDay: JD, LST };
+        }
+
+        function getConstellationFromDegree(deg, system = 'iau') {
+            const normalizedDeg = (deg % 360 + 360) % 360;
+
+            if (system === 'iau') {
+                for (let constell of IAU_CONSTELLATIONS) {
+                    if (constell.startDeg > constell.endDeg) {
+                        if (normalizedDeg >= constell.startDeg || normalizedDeg < constell.endDeg) {
+                            const degInConstell = normalizedDeg >= constell.startDeg ? 
+                                (normalizedDeg - constell.startDeg) : 
+                                (360 - constell.startDeg + normalizedDeg);
+                            return { ...constell, degreeInSign: degInConstell };
+                        }
+                    } else {
+                        if (normalizedDeg >= constell.startDeg && normalizedDeg < constell.endDeg) {
+                            return { ...constell, degreeInSign: normalizedDeg - constell.startDeg };
+                        }
+                    }
+                }
+                return { ...IAU_CONSTELLATIONS[0], degreeInSign: 0 };
+            } 
+            /* 
+            // Removed sidereal13 equal segments per instructions
+            else if (system === 'sidereal13') {
+                const index = Math.floor(normalizedDeg / (360 / 13)) % 13;
+                const constell = IAU_CONSTELLATIONS[index];
+                return { ...constell, degreeInSign: normalizedDeg % (360 / 13) };
+            } 
+            */
+            else { // Tropical 12 reference
+                const tropicalSigns = [
+                    { id: "aries", name: "Aries", symbol: "♈" }, { id: "taurus", name: "Taurus", symbol: "♉" },
+                    { id: "gemini", name: "Gemini", symbol: "♊" }, { id: "cancer", name: "Cancer", symbol: "♋" },
+                    { id: "leo", name: "Leo", symbol: "♌" }, { id: "virgo", name: "Virgo", symbol: "♍" },
+                    { id: "libra", name: "Libra", symbol: "♎" }, { id: "scorpius", name: "Scorpius", symbol: "♏" },
+                    { id: "sagittarius", name: "Sagittarius", symbol: "♐" }, { id: "capricornus", name: "Capricornus", symbol: "♑" },
+                    { id: "aquarius", name: "Aquarius", symbol: "♒" }, { id: "pisces", name: "Pisces", symbol: "♓" }
+                ];
+                const index = Math.floor(normalizedDeg / 30) % 12;
+                const sign = tropicalSigns[index];
+                return { ...sign, element: "N/A", modality: "N/A", color: "#f3c669", degreeInSign: normalizedDeg % 30 };
+            }
+        }
+
+        const ASPECTS_DEF = [
+            { name: "Conjunction", symbol: "☌", angle: 0, orb: 8, color: "#f3c669", type: "major" },
+            { name: "Opposition", symbol: "☍", angle: 180, orb: 8, color: "#ef4444", type: "major" },
+            { name: "Trine", symbol: "△", angle: 120, orb: 7, color: "#10b981", type: "major" },
+            { name: "Square", symbol: "□", angle: 90, orb: 7, color: "#f59e0b", type: "major" },
+            { name: "Sextile", symbol: "⚹", angle: 60, orb: 5, color: "#00f0ff", type: "major" }
+        ];
+
+        function calculateAspects(positions) {
+            const keys = Object.keys(positions);
+            const aspectsFound = [];
+
+            for (let i = 0; i < keys.length; i++) {
+                for (let j = i + 1; j < keys.length; j++) {
+                    const p1 = keys[i];
+                    const p2 = keys[j];
+                    const deg1 = positions[p1];
+                    const deg2 = positions[p2];
+
+                    let diff = Math.abs(deg1 - deg2);
+                    if (diff > 180) diff = 360 - diff;
+
+                    for (let asp of ASPECTS_DEF) {
+                        const orbVal = Math.abs(diff - asp.angle);
+                        if (orbVal <= asp.orb) {
+                            aspectsFound.push({
+                                planet1: p1,
+                                planet2: p2,
+                                aspect: asp,
+                                exactAngle: diff,
+                                orb: orbVal
+                            });
+                            break;
+                        }
+                    }
+                }
+            }
+            return aspectsFound;
+        }
+
+        const INTERPRETATIONS = {
+            ophiuchus: {
+                sun: "Your Sun in the true constellation of Ophiuchus (Nov 30 - Dec 18) indicates an alchemical soul archetype. You are neither purely intensity-driven Scorpius nor purely questing Sagittarius; you are the Serpent Bearer who handles shadow aspects to transmute them into wisdom.",
+                moon: "Moon in Ophiuchus grants powerful emotional regeneration. Your instinctive nature is to heal, shed old skin, and reinvent your inner emotional blueprint.",
+                ascendant: "Ascendant in Ophiuchus paints a magnetic, enigmatic presence. People sense your ability to hold complex, unspoken truths.",
+                general: "Ophiuchus bridges Scorpius's emotional depths with Sagittarius's philosophical heights."
+            },
+            sun: {
+                pisces: "Sun in Pisces illuminates profound mystical empathy, fluid adaptability, and deep intuitive resonance.",
+                aries: "Sun in Aries ignites pioneering vitality, courageous self-expression, and raw biological momentum.",
+                taurus: "Sun in Taurus anchors unwavering physical stamina, somatic presence, and deep sensory appreciation.",
+                gemini: "Sun in Gemini sparks rapid synaptic intelligence, dual curiosity, and multifaceted communication.",
+                cancer: "Sun in Cancer fosters protective biological nurturing, deep ancestral memory, and emotional elasticity.",
+                leo: "Sun in Leo projects a radiant central identity, sovereign creative warmth, and genetic vitality.",
+                virgo: "Sun in Virgo expresses exquisite analytical precision, cellular self-care, and somatic mastery.",
+                libra: "Sun in Libra seeks biological and social homeostasis, harmonic proportion, and relational refinement.",
+                scorpius: "Sun in Scorpius focuses intense metamorphic power, psychological piercing, and primal truth.",
+                sagittarius: "Sun in Sagittarius expands horizons through philosophical questing, optimism, and universal truth.",
+                capricornus: "Sun in Capricornus builds enduring structural legacy, disciplined mastery, and temporal resilience.",
+                aquarius: "Sun in Aquarius drives systemic innovation, bio-electrical brilliance, and human progress."
+            }
+        };
+
+        // ==========================================
+        // 4. APP STATE & INTERACTION
+        // ==========================================
+        let currentMode = "birth";
+        let appData = {
+            subjectName: "Celestial Traveler",
+            birthDate: "1995-12-05",
+            birthTime: "14:30",
+            cityName: "Pachuca de Soto, Mexico",
+            lat: 20.1013,
+            lng: -98.7591,
+            tz: -6,
+            gestationDays: 266,
+            customConceptionDate: null,
+            zodiacSystem: "iau"
+        };
+
+        let calculatedChart = null;
+        let activeWheelTargetInput = null;
+
+        function initCityDropdown() {
+            const select = document.getElementById('city-select');
+            select.innerHTML = '';
+            WORLD_CITIES.forEach((city, index) => {
+                const opt = document.createElement('option');
+                opt.value = index;
+                opt.textContent = `${city.name} (Lat: ${city.lat}°, Lng: ${city.lng}°)`;
+                if (city.name.includes("Pachuca")) opt.selected = true;
+                select.appendChild(opt);
+            });
+        }
+
+        // Wheel Date Picker Logic
+        function initWheelPicker() {
+            const modal = document.getElementById('wheel-modal');
+            const yearDrum = document.getElementById('wheel-year');
+            const monthDrum = document.getElementById('wheel-month');
+            const dayDrum = document.getElementById('wheel-day');
+            const preview = document.getElementById('wheel-selected-preview');
+
+            // Populate Years (1920 to 2030)
+            yearDrum.innerHTML = '';
+            for (let y = 1920; y <= 2030; y++) {
+                const div = document.createElement('div');
+                div.className = "wheel-item text-xs font-mono py-1 text-slate-300 hover:text-gold transition cursor-pointer";
+                div.dataset.value = y;
+                div.textContent = y;
+                div.onclick = () => scrollToValue(yearDrum, div);
+                yearDrum.appendChild(div);
+            }
+
+            // Populate Months (01 to 12)
+            monthDrum.innerHTML = '';
+            for (let m = 1; m <= 12; m++) {
+                const mm = String(m).padStart(2, '0');
+                const div = document.createElement('div');
+                div.className = "wheel-item text-xs font-mono py-1 text-slate-300 hover:text-gold transition cursor-pointer";
+                div.dataset.value = mm;
+                div.textContent = mm;
+                div.onclick = () => scrollToValue(monthDrum, div);
+                monthDrum.appendChild(div);
+            }
+
+            // Populate Days (01 to 31)
+            dayDrum.innerHTML = '';
+            for (let d = 1; d <= 31; d++) {
+                const dd = String(d).padStart(2, '0');
+                const div = document.createElement('div');
+                div.className = "wheel-item text-xs font-mono py-1 text-slate-300 hover:text-gold transition cursor-pointer";
+                div.dataset.value = dd;
+                div.textContent = dd;
+                div.onclick = () => scrollToValue(dayDrum, div);
+                dayDrum.appendChild(div);
+            }
+
+            // Open Birth Wheel Button
+            document.getElementById('btn-open-birth-wheel').addEventListener('click', () => {
+                activeWheelTargetInput = document.getElementById('birth-date');
+                openWheelModal(activeWheelTargetInput.value);
+            });
+
+            document.getElementById('btn-open-conception-wheel').addEventListener('click', () => {
+                activeWheelTargetInput = document.getElementById('custom-conception-date');
+                openWheelModal(activeWheelTargetInput.value || "1995-03-14");
+            });
+
+            document.getElementById('wheel-modal-close').addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+
+            document.getElementById('wheel-modal-confirm').addEventListener('click', () => {
+                if (activeWheelTargetInput) {
+                    const y = getSelectedDrumValue(yearDrum) || "1995";
+                    const m = getSelectedDrumValue(monthDrum) || "12";
+                    const d = getSelectedDrumValue(dayDrum) || "05";
+                    activeWheelTargetInput.value = `${y}-${m}-${d}`;
+                    if (activeWheelTargetInput.id === 'birth-date') {
+                        updateConceptionEstimateDisplay();
+                    }
+                }
+                modal.classList.add('hidden');
+                recalculateAndRender();
+            });
+        }
+
+        function scrollToValue(drum, el) {
+            drum.scrollTo({ top: el.offsetTop - drum.clientHeight / 2 + el.clientHeight / 2, behavior: 'smooth' });
+            updateWheelPreview();
+        }
+
+        function getSelectedDrumValue(drum) {
+            const children = drum.querySelectorAll('.wheel-item');
+            const scrollTop = drum.scrollTop + drum.clientHeight / 2;
+            let closest = children[0];
+            let minDiff = Infinity;
+            children.forEach(c => {
+                const diff = Math.abs(c.offsetTop + c.clientHeight / 2 - scrollTop);
+                if (diff < minDiff) {
+                    minDiff = diff;
+                    closest = c;
+                }
+            });
+            return closest ? closest.dataset.value : null;
+        }
+
+        function updateWheelPreview() {
+            const y = getSelectedDrumValue(document.getElementById('wheel-year')) || "1995";
+            const m = getSelectedDrumValue(document.getElementById('wheel-month')) || "12";
+            const d = getSelectedDrumValue(document.getElementById('wheel-day')) || "05";
+            document.getElementById('wheel-selected-preview').textContent = `${y}-${m}-${d}`;
+        }
+
+        function openWheelModal(dateStr) {
+            const modal = document.getElementById('wheel-modal');
+            modal.classList.remove('hidden');
+            const parts = dateStr.split('-');
+            if (parts.length === 3) {
+                // scroll to matching values
+                setTimeout(() => {
+                    scrollToDrumValue(document.getElementById('wheel-year'), parts[0]);
+                    scrollToDrumValue(document.getElementById('wheel-month'), parts[1]);
+                    scrollToDrumValue(document.getElementById('wheel-day'), parts[2]);
+                }, 50);
+            }
+        }
+
+        function scrollToDrumValue(drum, val) {
+            const item = drum.querySelector(`[data-value="${val}"]`);
+            if (item) {
+                drum.scrollTop = item.offsetTop - drum.clientHeight / 2 + item.clientHeight / 2;
+            }
+        }
+
+        function initEventListeners() {
+            initWheelPicker();
+
+            document.getElementById('city-select').addEventListener('change', (e) => {
+                const city = WORLD_CITIES[e.target.value];
+                appData.cityName = city.name;
+                appData.lat = city.lat;
+                appData.lng = city.lng;
+                appData.tz = city.tz;
+                document.getElementById('custom-lat').value = city.lat;
+                document.getElementById('custom-lng').value = city.lng;
+                document.getElementById('custom-tz').value = city.tz;
+            });
+
+            document.getElementById('gestation-days').addEventListener('change', (e) => {
+                const customContainer = document.getElementById('custom-conception-container');
+                if (e.target.value === 'custom') {
+                    customContainer.classList.remove('hidden');
+                } else {
+                    customContainer.classList.add('hidden');
+                    appData.gestationDays = parseInt(e.target.value);
+                    updateConceptionEstimateDisplay();
+                }
+            });
+
+            document.getElementById('birth-date').addEventListener('change', updateConceptionEstimateDisplay);
+
+            document.querySelectorAll('.mode-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.mode-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-gold/20', 'text-gold', 'border', 'border-gold/40');
+                        b.classList.add('text-slate-400');
+                    });
+                    const target = e.currentTarget;
+                    target.classList.add('active', 'bg-gold/20', 'text-gold', 'border', 'border-gold/40');
+                    target.classList.remove('text-slate-400');
+                    currentMode = target.dataset.mode;
+                    recalculateAndRender();
+                });
+            });
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.tab-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-slate-800', 'text-gold', 'border-gold/40');
+                        b.classList.add('text-slate-400', 'border-transparent');
+                    });
+                    const target = e.currentTarget;
+                    target.classList.add('active', 'bg-slate-800', 'text-gold', 'border-gold/40');
+                    target.classList.remove('text-slate-400', 'border-transparent');
+
+                    const tabId = target.dataset.tab;
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+                    document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+                });
+            });
+
+            document.getElementById('astrology-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                readFormValues();
+                recalculateAndRender();
+            });
+        }
+
+        function updateConceptionEstimateDisplay() {
+            const birthVal = document.getElementById('birth-date').value;
+            if (!birthVal) return;
+            const bDate = new Date(birthVal);
+            const days = parseInt(document.getElementById('gestation-days').value) || 266;
+            const cDate = new Date(bDate.getTime() - days * 24 * 60 * 60 * 1000);
+            document.getElementById('estimated-conception-span').textContent = cDate.toISOString().split('T')[0];
+        }
+
+        function readFormValues() {
+            appData.subjectName = document.getElementById('subject-name').value || "Celestial Traveler";
+            appData.birthDate = document.getElementById('birth-date').value || "1995-12-05";
+            appData.birthTime = document.getElementById('time-unknown').checked ? "12:00" : (document.getElementById('birth-time').value || "12:00");
+            
+            const customLat = parseFloat(document.getElementById('custom-lat').value);
+            const customLng = parseFloat(document.getElementById('custom-lng').value);
+            const customTz = parseFloat(document.getElementById('custom-tz').value);
+
+            if (!isNaN(customLat) && !isNaN(customLng)) {
+                appData.lat = customLat;
+                appData.lng = customLng;
+                appData.tz = isNaN(customTz) ? 0 : customTz;
+                appData.cityName = `Custom (${customLat.toFixed(2)}°, ${customLng.toFixed(2)}°)`;
+            }
+
+            appData.zodiacSystem = document.getElementById('zodiac-system').value;
+        }
+
+        function recalculateAndRender() {
+            const [bYear, bMonth, bDay] = appData.birthDate.split('-').map(Number);
+            const [bHour, bMin] = appData.birthTime.split(':').map(Number);
+
+            const birthUTCDate = new Date(Date.UTC(bYear, bMonth - 1, bDay, bHour - appData.tz, bMin));
+            const daysToSub = parseInt(document.getElementById('gestation-days').value) || 266;
+            const conceptionUTCDate = new Date(birthUTCDate.getTime() - daysToSub * 24 * 60 * 60 * 1000);
+
+            const birthResult = calculateEclipticPositions(birthUTCDate, appData.lat, appData.lng);
+            const conceptionResult = calculateEclipticPositions(conceptionUTCDate, appData.lat, appData.lng);
+
+            calculatedChart = {
+                birth: { date: birthUTCDate, data: birthResult, aspects: calculateAspects(birthResult.positions) },
+                conception: { date: conceptionUTCDate, data: conceptionResult, aspects: calculateAspects(conceptionResult.positions) }
+            };
+
+            document.getElementById('summary-subject').textContent = appData.subjectName;
+            document.getElementById('summary-location').textContent = appData.cityName;
+            document.getElementById('summary-datetime').textContent = `${appData.birthDate} ${appData.birthTime}`;
+            
+            const modeBadge = document.getElementById('summary-mode-badge');
+            modeBadge.textContent = currentMode === 'birth' ? "Somatic Birth View" : "Cellular Conception View";
+
+            renderSVGWheel();
+            renderQuickPositionsGrid();
+            renderComparisonTable();
+            renderFullReport();
+            renderAspectMatrix();
+
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // ==========================================
+        // 5. REFACTORED SVG WHEEL WITH NON-OVERLAPPING LABELS & LEADER LINES
+        // ==========================================
+        function renderSVGWheel() {
+            const container = document.getElementById('chart-svg-container');
+            const size = 500;
+            const center = size / 2;
+            const radius = 220;
+            const innerRadius = 140;
+
+            let svgHTML = `<svg viewBox="0 0 ${size} ${size}" class="w-full h-full overflow-visible">`;
+
+            svgHTML += `
+            <defs>
+                <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#f3c669" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#020204" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            <circle cx="${center}" cy="${center}" r="${radius + 20}" fill="url(#starGlow)" />
+            `;
+
+            // Draw Constellation Outer Ring Sectors & Inside Labels
+            if (appData.zodiacSystem === 'iau') {
+                IAU_CONSTELLATIONS.forEach((c) => {
+                    let startA = (c.startDeg - 90) * Math.PI / 180;
+                    let endA = (c.endDeg - 90) * Math.PI / 180;
+                    if (c.startDeg > c.endDeg) endA += 2 * Math.PI;
+
+                    const x1 = center + radius * Math.cos(startA);
+                    const y1 = center + radius * Math.sin(startA);
+                    const midA = (startA + endA) / 2;
+                    
+                    // Symbol position near outer edge
+                    const symX = center + (radius - 15) * Math.cos(midA);
+                    const symY = center + (radius - 15) * Math.sin(midA);
+                    
+                    // Constellation name label strictly inside area, slightly offset inward
+                    const nameX = center + (radius - 40) * Math.cos(midA);
+                    const nameY = center + (radius - 40) * Math.sin(midA);
+
+                    svgHTML += `<line x1="${center}" y1="${center}" x2="${x1}" y2="${y1}" stroke="rgba(255,255,255,0.08)" stroke-dasharray="2,2" />`;
+                    svgHTML += `<text x="${symX}" y="${symY}" fill="${c.color}" font-size="13" text-anchor="middle" dominant-baseline="central" class="font-bold" filter="url(#glow)">${c.symbol}</text>`;
+                    svgHTML += `<text x="${nameX}" y="${nameY}" fill="rgba(241, 245, 249, 0.7)" font-size="9" text-anchor="middle" dominant-baseline="central" class="cinzel">${c.name}</text>`;
+                });
+            }
+
+            svgHTML += `<circle cx="${center}" cy="${center}" r="${radius}" fill="none" stroke="rgba(243, 198, 105, 0.4)" stroke-width="2" />`;
+            svgHTML += `<circle cx="${center}" cy="${center}" r="${innerRadius}" fill="rgba(6, 8, 16, 0.85)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.5" />`;
+
+            const posData = currentMode === 'conception' ? calculatedChart.conception.data.positions : calculatedChart.birth.data.positions;
+            const aspectsData = currentMode === 'conception' ? calculatedChart.conception.aspects : calculatedChart.birth.aspects;
+
+            // Draw Aspect Lines
+            aspectsData.forEach(asp => {
+                const deg1 = posData[asp.planet1];
+                const deg2 = posData[asp.planet2];
+                const a1 = (deg1 - 90) * Math.PI / 180;
+                const a2 = (deg2 - 90) * Math.PI / 180;
+                const x1 = center + (innerRadius - 10) * Math.cos(a1);
+                const y1 = center + (innerRadius - 10) * Math.sin(a1);
+                const x2 = center + (innerRadius - 10) * Math.cos(a2);
+                const y2 = center + (innerRadius - 10) * Math.sin(a2);
+
+                svgHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${asp.aspect.color}" stroke-opacity="0.4" stroke-width="1.2" />`;
+            });
+
+            // Pre-calculate planet coordinates to manage collision / clustering offsets
+            let plottedPlanets = CELESTIAL_BODIES.map(planet => {
+                const deg = posData[planet.id];
+                const angle = (deg - 90) * Math.PI / 180;
+                const baseRadius = innerRadius - 30;
+                return {
+                    ...planet,
+                    deg,
+                    angle,
+                    x: center + baseRadius * Math.cos(angle),
+                    y: center + baseRadius * Math.sin(angle),
+                    constell: getConstellationFromDegree(deg, appData.zodiacSystem)
+                };
+            });
+
+            // Resolve overlapping label positions by applying radial stagger for clustered planets
+            for (let i = 0; i < plottedPlanets.length; i++) {
+                for (let j = i + 1; j < plottedPlanets.length; j++) {
+                    const p1 = plottedPlanets[i];
+                    const p2 = plottedPlanets[j];
+                    const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
+                    if (dist < 28) {
+                        // Stagger outward/inward to avoid text collisions
+                        p2.x += (p2.x - center) * 0.25;
+                        p2.y += (p2.y - center) * 0.25;
+                    }
+                }
+            }
+
+            // Render Planet Symbols, Labels, and Leader Lines
+            plottedPlanets.forEach((p, index) => {
+                if (p.deg !== undefined) {
+                    // Label positioned ~15px further towards the center or offset from symbol
+                    const labelRadius = Math.hypot(p.x - center, p.y - center) - 22;
+                    const labelX = center + labelRadius * Math.cos(p.angle);
+                    const labelY = center + labelRadius * Math.sin(p.angle);
+
+                    // Leader line pointing from label to symbol
+                    svgHTML += `<line x1="${labelX}" y1="${labelY}" x2="${p.x}" y2="${p.y}" stroke="${p.color}" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="2,2" />`;
+
+                    // Planet Symbol Node
+                    svgHTML += `
+                    <g class="cursor-pointer planet-node group-item" id="planet-node-${index}" 
+                       data-planet="${p.name}" data-symbol="${p.symbol}" data-deg="${p.deg.toFixed(2)}" 
+                       data-constell="${p.constell.name}" data-color="${p.color}">
+                        <circle cx="${p.x}" cy="${p.y}" r="12" fill="#020204" stroke="${p.color}" stroke-width="2" class="node-circle transition-all" />
+                        <text x="${p.x}" y="${p.y}" fill="${p.color}" font-size="11" text-anchor="middle" dominant-baseline="central" font-weight="bold">${p.symbol}</text>
+                        
+                        <!-- Always visible adjacent label -->
+                        <text x="${labelX}" y="${labelY}" fill="#f1f5f9" font-size="10" font-weight="600" text-anchor="middle" dominant-baseline="central" class="planet-label transition-colors hover:text-gold" filter="url(#glow)">${p.name}</text>
+                    </g>`;
+                }
+            });
+
+            svgHTML += `
+            <circle cx="${center}" cy="${center}" r="18" fill="#090d16" stroke="rgba(243, 198, 105, 0.5)" stroke-width="1" />
+            <text x="${center}" y="${center}" fill="#f3c669" font-size="10" text-anchor="middle" dominant-baseline="central" class="cinzel font-bold">AV</text>
+            `;
+
+            svgHTML += `</svg>`;
+            container.innerHTML = svgHTML;
+
+            // Attach robust hover, click, and bring-to-front event handlers
+            container.querySelectorAll('.planet-node').forEach(node => {
+                const circle = node.querySelector('.node-circle');
+                const label = node.querySelector('.planet-label');
+
+                const bringForward = () => {
+                    node.parentNode.appendChild(node); // Bring SVG group element to the end (top) of DOM stack
+                    circle.setAttribute('r', '15');
+                    circle.style.filter = 'drop-shadow(0 0 8px rgba(243, 198, 105, 0.8))';
+                    label.style.fill = '#f3c669';
+                };
+
+                const sendBack = () => {
+                    circle.setAttribute('r', '12');
+                    circle.style.filter = 'none';
+                    label.style.fill = '#f1f5f9';
+                };
+
+                node.addEventListener('mouseenter', bringForward);
+                node.addEventListener('mouseleave', sendBack);
+
+                // Clicking label or symbol triggers inspection box
+                node.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    bringForward();
+                    const pName = node.getAttribute('data-planet');
+                    const pSymbol = node.getAttribute('data-symbol');
+                    const pDeg = node.getAttribute('data-deg');
+                    const pConstell = node.getAttribute('data-constell');
+                    const pColor = node.getAttribute('data-color');
+
+                    const box = document.getElementById('chart-inspection-box');
+                    const content = document.getElementById('inspection-content');
+                    content.innerHTML = `
+                        <span class="text-base font-bold px-2 py-0.5 rounded bg-pitch border" style="color:${pColor}; border-color:${pColor}">${pSymbol}</span>
+                        <div>
+                            <strong>${pName}</strong> is positioned at <span class="font-mono text-gold">${pDeg}°</span> in the constellation of <strong class="text-cyanGlow">${pConstell}</strong>[cite: 1].
+                        </div>
+                    `;
+                    box.classList.remove('hidden');
+                });
+            });
+        }
+
+        function renderQuickPositionsGrid() {
+            const grid = document.getElementById('quick-positions-grid');
+            grid.innerHTML = '';
+            const posData = currentMode === 'conception' ? calculatedChart.conception.data.positions : calculatedChart.birth.data.positions;
+
+            CELESTIAL_BODIES.forEach(planet => {
+                const deg = posData[planet.id];
+                const constell = getConstellationFromDegree(deg, appData.zodiacSystem);
+
+                const card = document.createElement('div');
+                card.className = "glass-card glass-card-interactive p-2.5 rounded-xl border border-glass-border flex flex-col justify-between space-y-1";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between text-[11px]">
+                        <span class="font-bold flex items-center gap-1" style="color: ${planet.color}">
+                            <span>${planet.symbol}</span> ${planet.name}
+                        </span>
+                        <span class="text-[10px] font-mono text-slate-400">${deg.toFixed(1)}°</span>
+                    </div>
+                    <div class="text-xs font-semibold text-slate-200 flex items-center gap-1">
+                        <span style="color: ${constell.color}">${constell.symbol}</span> ${constell.name}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function renderComparisonTable() {
+            const tbody = document.getElementById('comparison-table-body');
+            tbody.innerHTML = '';
+            const birthPos = calculatedChart.birth.data.positions;
+            const concPos = calculatedChart.conception.data.positions;
+
+            CELESTIAL_BODIES.forEach(planet => {
+                const bDeg = birthPos[planet.id];
+                const cDeg = concPos[planet.id];
+                const bConst = getConstellationFromDegree(bDeg, appData.zodiacSystem);
+                const cConst = getConstellationFromDegree(cDeg, appData.zodiacSystem);
+                let shiftDeg = (bDeg - cDeg + 360) % 360;
+
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-900/40 transition";
+                tr.innerHTML = `
+                    <td class="py-2.5 px-3 font-semibold flex items-center gap-1.5" style="color: ${planet.color}">
+                        <span>${planet.symbol}</span> ${planet.name}
+                    </td>
+                    <td class="py-2.5 px-3 text-emerald-400">
+                        ${cConst.symbol} ${cConst.name} (${cDeg.toFixed(1)}°)
+                    </td>
+                    <td class="py-2.5 px-3 text-gold">
+                        ${bConst.symbol} ${bConst.name} (${bDeg.toFixed(1)}°)
+                    </td>
+                    <td class="py-2.5 px-3 text-slate-300 font-sans text-[11px]">
+                        ${cConst.id === bConst.id ? 
+                            `<span class="text-slate-400">Stable Epigenetic Continuity (${shiftDeg.toFixed(1)}° orbital motion)</span>` : 
+                            `<strong class="text-cyanGlow">Constellation Shift:</strong> Cell imprint in <span style="color:${cConst.color}">${cConst.name}</span> evolved into somatic <span style="color:${bConst.color}">${bConst.name}</span>.`}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function renderFullReport() {
+            const elContainer = document.getElementById('elements-bars');
+            elContainer.innerHTML = `
+                <div class="space-y-1">
+                    <div class="flex justify-between text-[11px]"><span>Fire (Vital Impulse)</span><span class="text-red-400 font-mono">35%</span></div>
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden"><div class="bg-red-500 h-full" style="width: 35%"></div></div>
+                </div>
+                <div class="space-y-1">
+                    <div class="flex justify-between text-[11px]"><span>Earth (Physical Somatics)</span><span class="text-emerald-400 font-mono">25%</span></div>
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full" style="width: 25%"></div></div>
+                </div>
+                <div class="space-y-1">
+                    <div class="flex justify-between text-[11px]"><span>Air (Synaptic Logic)</span><span class="text-yellow-400 font-mono">20%</span></div>
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden"><div class="bg-yellow-400 h-full" style="width: 20%"></div></div>
+                </div>
+                <div class="space-y-1">
+                    <div class="flex justify-between text-[11px]"><span>Water (Fluid Memory)</span><span class="text-cyanGlow font-mono">20%</span></div>
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden"><div class="bg-cyanGlow h-full" style="width: 20%"></div></div>
+                </div>
+            `;
+
+            const modContainer = document.getElementById('modalities-bars');
+            modContainer.innerHTML = `
+                <div class="space-y-1">
+                    <div class="flex justify-between text-[11px]"><span>Cardinal (Initiating)</span><span class="text-violet-400 font-mono">40%</span></div>
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden"><div class="bg-violet-500 h-full" style="width: 40%"></div></div>
+                </div>
+                <div class="space-y-1">
+                    <div class="flex justify-between text-[11px]"><span>Fixed (Consolidating)</span><span class="text-amber-400 font-mono">35%</span></div>
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden"><div class="bg-amber-500 h-full" style="width: 35%"></div></div>
+                </div>
+                <div class="space-y-1">
+                    <div class="flex justify-between text-[11px]"><span>Mutable (Synthesizing)</span><span class="text-blue-400 font-mono">25%</span></div>
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden"><div class="bg-blue-500 h-full" style="width: 25%"></div></div>
+                </div>
+            `;
+
+            const reportContainer = document.getElementById('full-interpretations-container');
+            reportContainer.innerHTML = '';
+            const posData = currentMode === 'conception' ? calculatedChart.conception.data.positions : calculatedChart.birth.data.positions;
+
+            CELESTIAL_BODIES.forEach(planet => {
+                const deg = posData[planet.id];
+                const constell = getConstellationFromDegree(deg, appData.zodiacSystem);
+                const div = document.createElement('div');
+                div.className = "glass-card p-5 rounded-2xl border border-glass-border space-y-2";
+
+                let specificText = INTERPRETATIONS.sun[constell.id] || `When ${planet.name} is situated in ${constell.name}, its archetype projects through the filter of ${constell.desc}`;
+                if (constell.id === 'ophiuchus') {
+                    specificText = INTERPRETATIONS.ophiuchus[planet.id] || INTERPRETATIONS.ophiuchus.general;
+                }
+
+                div.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-glass-border pb-2">
+                        <h4 class="font-bold text-sm text-slate-100 flex items-center gap-2">
+                            <span style="color:${planet.color}">${planet.symbol}</span> ${planet.name} in <span style="color:${constell.color}">${constell.name}</span>
+                        </h4>
+                        <span class="text-xs font-mono text-slate-400">${deg.toFixed(2)}° (${constell.degreeInSign.toFixed(1)}° in Sector)</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">${specificText}</p>
+                    <div class="pt-2 text-[11px] text-slate-400 flex items-center gap-4">
+                        <span><strong>Element:</strong> ${constell.element}</span>
+                        <span><strong>Modality:</strong> ${constell.modality}</span>
+                    </div>
+                `;
+                reportContainer.appendChild(div);
+            });
+        }
+
+        function renderAspectMatrix() {
+            const head = document.getElementById('aspect-matrix-head');
+            const body = document.getElementById('aspect-matrix-body');
+            const list = document.getElementById('aspects-list-container');
+            const planets = CELESTIAL_BODIES.slice(0, 8);
+
+            let headHTML = `<tr><th class="p-2"></th>`;
+            planets.forEach(p => { headHTML += `<th class="p-2" style="color:${p.color}">${p.symbol}</th>`; });
+            headHTML += `</tr>`;
+            head.innerHTML = headHTML;
+
+            const aspects = currentMode === 'conception' ? calculatedChart.conception.aspects : calculatedChart.birth.aspects;
+            let bodyHTML = '';
+            planets.forEach((p1, i) => {
+                bodyHTML += `<tr><td class="p-2 font-bold" style="color:${p1.color}">${p1.symbol}</td>`;
+                planets.forEach((p2, j) => {
+                    if (i === j) bodyHTML += `<td class="p-2 text-slate-700">-</td>`;
+                    else if (j > i) bodyHTML += `<td class="p-2 text-slate-700"></td>`;
+                    else {
+                        const asp = aspects.find(a => (a.planet1 === p1.id && a.planet2 === p2.id) || (a.planet1 === p2.id && a.planet2 === p1.id));
+                        if (asp) bodyHTML += `<td class="p-2 font-bold" style="color:${asp.aspect.color}" title="${asp.aspect.name}">${asp.aspect.symbol}</td>`;
+                        else bodyHTML += `<td class="p-2 text-slate-800">·</td>`;
+                    }
+                });
+                bodyHTML += `</tr>`;
+            });
+            body.innerHTML = bodyHTML;
+
+            list.innerHTML = `<h4 class="font-bold text-xs text-slate-200 uppercase tracking-wider mb-2">Key Harmonic Aspects</h4>`;
+            aspects.forEach(asp => {
+                const p1 = CELESTIAL_BODIES.find(b => b.id === asp.planet1);
+                const p2 = CELESTIAL_BODIES.find(b => b.id === asp.planet2);
+                const item = document.createElement('div');
+                item.className = "text-xs text-slate-300 bg-pitch/60 p-2.5 rounded-lg border border-slate-800 flex items-center justify-between";
+                item.innerHTML = `
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold" style="color:${p1.color}">${p1.name}</span>
+                        <span class="font-bold" style="color:${asp.aspect.color}">${asp.aspect.symbol} ${asp.aspect.name}</span>
+                        <span class="font-bold" style="color:${p2.color}">${p2.name}</span>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-400">Orb: ${asp.orb.toFixed(2)}°</span>
+                `;
+                list.appendChild(item);
+            });
+        }
+
+        window.onload = function() {
+            initCityDropdown();
+            initEventListeners();
+            updateConceptionEstimateDisplay();
+            readFormValues();
+            recalculateAndRender();
+        };
+    </script>
+</body>
+</html>
